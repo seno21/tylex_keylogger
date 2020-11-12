@@ -18,7 +18,6 @@
 <br>You can sendlog via email using this feature
 
 <br>You must Turn On ```Less Secure Apps Access```
-![Sec1](https://user-images.githubusercontent.com/33826924/98936267-4eb6a400-2517-11eb-8e80-17431fa4db11.jpg)
 ![Sec2](https://user-images.githubusercontent.com/33826924/98936270-4f4f3a80-2517-11eb-8009-c66a5b3c8c13.jpg)
 <br>Visit https://support.google.com/accounts/answer/6010255?hl=en
 
